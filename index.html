@@ -44,21 +44,28 @@
                 My curiosity and enthusiasm drive my pursuit of knowledge in this ever-evolving field.</p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-link">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links onclick="opentab('education')">Education</p>
                 </div>
-                <div class="tab-contents">
+                <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>Data Analyst</span><br>Created Data Wearhousing Projects</li>
-                        <li><span>NLP</span><br>Created an Report using Textual Data of a Music App</li>
-                        <li><span>Python</span><br>Contribution on Automation Technology</li>
+                        <li><span>Data Warehousing</span><br>Created Data Wearhousing Projects</li>
+                        <li><span>Data Analyst</span><br>Created an Report using Textual Data of a Music App</li>
+                        <li><span>Python</span><br>Created Project on Data and ML Technology</li>
                     </ul>
                 </div>
-                <div class="tab-contents">
+                <div class="tab-contents" id="experience">
                     <ul>
-                        <li><span>Education 2019 - Current</span><br>Savitribai Phule Pune University</li>
-                        <li><span>2022-2023</span><br>Jr Data Analyst Intern at startup</li>
+                        <li><span>Internship 2022-2023</span><br>work in AIML team as Jr Data Analyst</li>
+                        <li><span>Project1</span><br>Documentation of a image Processing Project</li>
+                        <li><span>Project2</span><br>Contribution on Automation Technology</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Education 2019 - 2023</span><br>Savitribai Phule Pune University</li>
+                        <li><span>2017- 2019</span><br>HSC from Maharashtra State Bord</li>
                         <li><span>Programming</span><br>Self-taught Programmer</li>
                     </ul>
                 </div>
@@ -66,6 +73,22 @@
         </div>
     </div>
 </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablinks of tablinks){
+            tablinks.classList.remove("active-link")
+        }
+        for(tabcontents of tabcontents){
+            tabcontents .classList.remove("active-tab")
+        }
+    }
+
+</script>
 
 </body>
 </html>
