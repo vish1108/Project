@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vishal Waghmare - Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6988b413b3.js" crossorigin="anonymous"></script>
     <!-- <h1> Vishal Waghmare</h1> -->
     <style>
         
@@ -45,8 +46,8 @@
 
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
@@ -73,6 +74,29 @@
         </div>
     </div>
 </div>
+<!-- -----------services----------- -->
+<div id="services">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+        <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Data Analysis</h2>
+            <p>Work as data Analyst and create ML models </p>
+            <a href="#">Learn More</a>
+        </div>
+        <div>
+            <h2>Power BI</h2>
+            <p>We can create best BI Dashbord</p>
+            <a href="#">Learn More</a>
+        </div>
+        <div>
+            <h2>MS-SQL</h2>
+            <p>mainatain MS-SQL Database</p>
+            <a href="#">Learn More</a>
+        </div>
+    </div>
+
+</div>
 
 <script>
 
@@ -80,12 +104,14 @@
     var tabcontents = document.getElementsByClassName("tab-contents")
 
     function opentab(tabname){
-        for(tablinks of tablinks){
-            tablinks.classList.remove("active-link")
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
         }
-        for(tabcontents of tabcontents){
-            tabcontents .classList.remove("active-tab")
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
         }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
     }
 
 </script>
