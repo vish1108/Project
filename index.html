@@ -7,21 +7,24 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6988b413b3.js" crossorigin="anonymous"></script>
     <!-- <h1> Vishal Waghmare</h1> -->
+
     <style>
         
     </style>
 </head>
 <body>
-<div id="background-img">
+<div id="background-img" class="logo">
     <div class="container">
         <nav>
-            <img src = "img/Logo.png-removebg-preview (1).png" class="logo">
-        <ul>
+            <img src = "img/Logo.png-removebg-preview (1).png" class="logo" alt="VW">
+        <ul id="sidemenu">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Contact</a></li>
+            <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
         </ul>
+        <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </img>
     </nav>
     <div class="header-text">
@@ -136,6 +139,36 @@
 
 </div>
 <!-- --------------------Contacts--------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p> <i class="fa-solid fa-paper-plane"></i>Vishalwaghmare11182001@gmailcom</p>
+                <p> <i class="fa-solid fa-phone"></i>8080178719</p>
+                <div class="Social-icons">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-solid fa-x"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-medium"></i></a>
+                </div>
+                <a href="img/Resume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+        <div class="copyright">
+            <p>Copyright @ Vishal. Made with <i class="fa-solid fa-heart"></i> and taking help from youtube along with chatgpt<i class="fa-solid fa-face-laugh-wink"></i></p>
+        </div>
+</div>
+
 
 
 
@@ -153,6 +186,21 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+
+
+    function openmenu(){
+        sidemenu.style.right = "0"
+
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px"
+
     }
 
 </script>
