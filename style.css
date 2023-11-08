@@ -4,6 +4,9 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color:rgb(32, 24, 24);
     color: #fff;
@@ -440,4 +443,9 @@ nav .fa-solid{
     }
 
 
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
 }

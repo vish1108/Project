@@ -18,17 +18,18 @@
         <nav>
             <img src = "img/Logo.png-removebg-preview (1).png" class="logo" alt="VW">
         <ul id="sidemenu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#background-img">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Certificates</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
             <i class="fa-regular fa-circle-xmark" onclick="closemenu()"></i>
         </ul>
         <i class="fa-solid fa-bars" onclick="openmenu()"></i>
     </img>
     </nav>
     <div class="header-text">
-        <p>Data Analyst</p>
+        <p>Data enthusiast</p>
         <h1>Hi, I'm <span>Vishal </span><br>Waghmare From India</h1>
     </div>
 </div>
@@ -84,19 +85,19 @@
         <div>
             <i class="fa-solid fa-code"></i>
             <h2>Python Basic From HackerRank</h2>
-            <p>Study Python From Basics</p>
-            <a href="#">Learn More</a>
+            <!-- <p>Study Python From Basics</p> -->
+            <a href="https://www.hackerrank.com/certificates/280481556e14" target="_blank">Learn More</a>
         </div>
         <div>
             <i class="fa-solid fa-database"></i>
             <h2>MS-SQL Server</h2>
-            <p>We can create best BI Dashbord</p>
-            <a href="#">Learn More</a>
+            <!-- <p>We can create best BI Dashbord</p> -->
+            <a href="https://www.hackerrank.com/certificates/8850a4572268" target="_blank">Learn More</a>
         </div>
         <div>
             <i class="fa-solid fa-certificate"></i>
             <h2>internship</h2>
-            <p>mainatain MS-SQL Database</p>
+            <!-- <p>mainatain MS-SQL Database</p> -->
             <a href="#">Learn More</a>
         </div>
     </div>
@@ -113,7 +114,7 @@
                 <div class="layer">
                     <h3>End To End Data Warehouse Project</h3>
                     <p>Data Warehouse Project utilizing technologies like Python, MS-SQL server, Power Bi and the ML model. </p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <a href="https://github.com/vish1108/DataWarehouse_Project" target="_blank"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -121,7 +122,7 @@
                 <div class="layer">
                     <h3>SKIN CANCER IMAGE CLASSIFICATION</h3>
                     <p>Created a method using the HAM10000 dataset and Deep learning to detect skin cancer.</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <a href="https://github.com/vish1108/Image-classification-using-Ham10000" target="_blank"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
             <div class="work">
@@ -129,7 +130,7 @@
                 <div class="layer">
                     <h3>SENTIMENT ANALYSIS USING NLP</h3>
                     <p>sentiment analysis project utilizing Natural Language Processing (NLP) and Python</p>
-                        <a href="#"><i class="fa-solid fa-link"></i></a>
+                        <a href="https://github.com/vish1108/NLP-Sentiment-analysis-of-music-app" target="_blank"><i class="fa-solid fa-link"></i></a>
                 </div>
             </div>
         </div>
@@ -147,20 +148,23 @@
                 <p> <i class="fa-solid fa-paper-plane"></i>Vishalwaghmare11182001@gmailcom</p>
                 <p> <i class="fa-solid fa-phone"></i>8080178719</p>
                 <div class="Social-icons">
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-solid fa-x"></i></a>
-                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                    <a href=""><i class="fa-brands fa-medium"></i></a>
+                    <a href="https://www.instagram.com/vishal_w1108/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/VishalW42551740" target="_blank"><i class="fa-solid fa-x"></i></a>
+                    <a href="https://www.linkedin.com/in/vishal-waghmare123/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://medium.com/@vishalwaghmare1182001" target="_blank"><i class="fa-brands fa-medium"></i></a>
+                    <a href="https://github.com/vish1108" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.hackerrank.com/profile/vishalwaghmare11" target="_blank"><i class="fa-brands fa-hackerrank"></i></a>
                 </div>
                 <a href="img/Resume.pdf" download class="btn btn2">Download Resume</a>
             </div>
             <div class="contact-right">
-                <form>
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="your Email" required>
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
+                <span id="msg">Hello</span>
             </div>
         </div>
     </div>
@@ -204,6 +208,24 @@
     }
 
 </script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxeLIPP-CtywkOCOZ0WsfLwMrb1biGCRihehnQCkKwf1s6zjaO118tBObrkrkEefuNTjg/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent Successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },3000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 </body>
 </html>
