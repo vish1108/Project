@@ -3,7 +3,7 @@
 
 ## Description
 
-This is my personal portfolio website, showcasing my skills and projects in the field of [Your Field/Area of Expertise]. The site is built using a tech stack that includes HTML, CSS, and JavaScript.
+This is my personal portfolio website, showcasing my skills and projects in the field of Data Analytics/Python, MS SQL SERVER, ETL, Data Warehouse. The site is built using a tech stack that includes HTML, CSS, and JavaScript.
 
 ## Tech Stack
 
