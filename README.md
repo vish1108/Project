@@ -2,7 +2,6 @@
 # Personal Portfolio Website
 
 ## Description
-
 This is my personal portfolio website, showcasing my skills and projects in the field of Data Science & Data Analytics. The site is built using a tech stack that includes HTML, CSS, and JavaScript.
 
 ## Tech Stack
